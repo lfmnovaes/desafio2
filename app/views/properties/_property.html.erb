@@ -9,4 +9,13 @@
     <%= property.description %>
   </p>
 
+  <p>
+    <strong>Cover photo:</strong>
+    <% if property.cover_photo %>
+      <%= image_tag property.cover_photo.path %>
+    <% else %>
+      <%= image_tag "https://via.placeholder.com/640x480" %>
+    <% end %>
+  </p>
+
 </div>
