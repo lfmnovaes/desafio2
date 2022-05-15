@@ -10,12 +10,12 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-  <header class="flex flex-col fixed shrink-0 box-border w-full left-auto right-0 top-0 max-h-14 bg-white">
+  <header class="flex flex-col fixed shrink-0 box-border w-full left-auto right-0 top-0 max-h-14 bg-white z-50">
     <%= render "shared/nav" %>
     <%= render "shared/filter_bar" %>
   </header>
   <body>
-    <main class="container mx-auto mt-28 px-5">
+    <main class="max-w-full m-0 mt-28">
       <%= yield %>
     </main>
   </body>

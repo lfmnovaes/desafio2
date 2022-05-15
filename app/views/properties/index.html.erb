@@ -1,16 +1,9 @@
 <p style="color: green"><%= notice %></p>
 
-<h1 class="text-3xl font-bold underline">
-  Properties
-</h1>
-
-<div id="properties">
+<div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5 bg-[#f8f9fe]">
   <% @properties.each do |property| %>
-    <%= render property %>
-    <p>
-      <%= link_to "Show this property", property %>
-    </p>
+    <%= link_to property do %>
+      <%= render property %>
+    <% end %>
   <% end %>
 </div>
-
-<%= link_to "New property", new_property_path %>

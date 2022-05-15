@@ -1,21 +1,18 @@
-<div id="<%= dom_id property %>">
-  <p>
-    <strong>Name:</strong>
-    <%= property.name %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= property.description %>
-  </p>
-
-  <p>
-    <strong>Cover photo:</strong>
-    <% if property.cover_photo %>
-      <%= image_tag property.cover_photo.path %>
-    <% else %>
-      <%= image_tag "https://via.placeholder.com/640x480" %>
-    <% end %>
-  </p>
-
+<div class="rounded-lg overflow-hidden shadow-xl border relative">
+  <div class="absolute top-6 left-6 bg-white rounded-full py-0.5 px-2">
+    ID JD000<%= property.id %>
+  </div>
+  <%= image_tag(property.cover_photo.path, :class => "p-4") %>
+  <div class="px-4 py-4">
+    <div class="font-normal text-sm">Jardim Paulista</div>
+    <div class="font-semibold text-base mb-2">Address <%= property.name %></div>
+    <p class="text-gray-700 text-xs py-4">
+      3 bedrooms • 2 baths
+    </p>
+  </div>
+  <div class="px-4 line-through text-sm">R$ 12,923</div>
+  <div class="px-4 pb-4 flex justify-between">
+    <div class="font-medium text-xl">R$ 10,392<span class="text-xs">/mo</span></div>
+    <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm text-gray-700">Available 20 May</span>
+  </div>
 </div>
