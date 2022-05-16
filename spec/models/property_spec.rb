@@ -46,6 +46,6 @@ RSpec.describe Property, type: :model do
     expect(@property.cover_photo.path).to eq(@cover_photo.path)
   end
   it 'check initials from the district' do
-    expect(@property.get_initials_district).to eq('JD')
+    expect(@property.district_to_initials).to eq('JD')
   end
 end
