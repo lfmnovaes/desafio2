@@ -35,7 +35,7 @@
     <div class="px-4 line-through text-sm">R$ <%= number_with_delimiter(property.price) %></div>
     <div class="px-4 pb-4 flex justify-between">
       <div class="font-medium text-xl">R$ <%= number_with_delimiter(property.price - property.discount) %><span class="text-xs">/mo</span></div>
-      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm text-gray-700">Available 20 May</span>
+      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm text-gray-700">Available <%= rand(Time.now.strftime("%d").to_i..30) %> <%= Time.now.strftime("%B") %></span>
     </div>
   <% end %>
 </div>

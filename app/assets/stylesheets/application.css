@@ -18,11 +18,13 @@
   --swiper-theme-color: gray !important;
 }
 
-svg, img {
+svg,
+img {
   display: inherit;
 }
 
-.swiper-button-next, .swiper-button-prev {
+.swiper-button-next,
+.swiper-button-prev {
   color: whitesmoke !important;
   top: 87% !important;
   z-index: 99 !important;
