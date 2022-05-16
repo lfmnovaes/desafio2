@@ -1,14 +1,25 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+sp_districts = [
+  'Itaim Bibi',
+  'Jardim Paulista',
+  'Consolação',
+  'Moema',
+  'Brooklin',
+  'Vila Olimpia',
+  'Vila Nova Conceição'
+]
 
-for i in 1..50 do
-  @property = Property.create(name: "Apartment #{i}", description: "This is a great apartment")
-  for j in 1..3 do
-    @property.photos.create(path: "640x480/#{(i-1)*3+j}.jpg")
+for i in 1..50
+  price_rand = rand(8000...15000)
+  @property =
+    Property.create(
+      district: sp_districts[rand(1...sp_districts.size)],
+      address: Faker::Address.street_address,
+      bedroom: rand(1..3),
+      bathroom: rand(1..2),
+      price: price_rand,
+      discount: if rand(0..1) == 1 then rand(500...1500) else 0 end
+    )
+  for j in 1..3
+    @property.photos.create(path: "640x480/#{(i - 1) * 3 + j}.jpg")
   end
 end

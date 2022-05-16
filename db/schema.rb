@@ -23,8 +23,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_14_020616) do
   end
 
   create_table "properties", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
+    t.string "district"
+    t.string "address"
+    t.integer "bedroom"
+    t.integer "bathroom"
+    t.integer "price"
+    t.integer "discount"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
