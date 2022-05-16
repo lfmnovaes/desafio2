@@ -22,12 +22,13 @@ TailwindCSS >= 3.0.0
    ```
 - Go to the cloned directory with `cd desafio2`
 - Run `bundle install` to install the necessary rails gems
+- Run `npm install` to install the necessary JavaScript packages
 - Install the `postgresql` database and all necessary dependencies (if you are on Ubuntu for example, run `sudo apt install postgresql postgresql-contrib`)
 - Run `rails db:create` and `rails db:migrate` to create the database locally
   - If you already have one with the same name just run `rails db:reset` instead
 - After installing everything, you can run now the website with `./bin/dev` (to run rails with tailwind in the development environment)
 
-## Running linters
+## Running linters locally
 - Rubocop (Ruby code linter)
 ```
 rubocop
