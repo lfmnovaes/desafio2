@@ -45,4 +45,7 @@ RSpec.describe Property, type: :model do
   it 'cover photo should be the third photo' do
     expect(@property.cover_photo.path).to eq(@cover_photo.path)
   end
+  it 'check initials from the district' do
+    expect(@property.get_initials_district).to eq('JD')
+  end
 end

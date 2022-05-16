@@ -12,7 +12,7 @@ class Property < ApplicationRecord
     photos.third
   end
 
-  def sp_district
+  def get_initials_district
     sp_districts = {
       'Itaim Bibi' => 'IT',
       'Jardim Paulista' => 'JD',

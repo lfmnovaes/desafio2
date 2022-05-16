@@ -1,4 +1,4 @@
-# Desafio Plathanus/Tabas (Exercício 2)
+# Challenge Plathanus/Tabas (Exercise 2)
 
 > Backend: Model Property with a required name and has many photos; for each property, the third photo is the property cover; the photos are stored locally
 

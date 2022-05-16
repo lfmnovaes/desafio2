@@ -26,21 +26,21 @@ img {
 .swiper-button-next,
 .swiper-button-prev {
   color: whitesmoke !important;
-  top: 87% !important;
+  top: 86.5% !important;
   z-index: 99 !important;
 }
 
 .swiper-button-prev {
-  left: 70% !important;
+  left: 67% !important;
 }
 
 .swiper-button-next {
-  right: 5% !important;
+  right: 7% !important;
 }
 
 .swiper-pagination {
   background: rgba(41, 45, 50, 0.3) !important;
-  width: 15% !important;
+  width: 30% !important;
   bottom: 10% !important;
-  left: 75% !important;
+  left: 65% !important;
 }
