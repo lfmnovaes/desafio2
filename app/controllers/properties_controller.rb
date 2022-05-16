@@ -7,7 +7,9 @@ class PropertiesController < ApplicationController
   end
 
   # GET /properties/1 or /properties/1.json
-  def show; end
+  def show
+    @property = Property.includes(:photos).find(params[:id])
+  end
 
   # GET /properties/new
   def new
