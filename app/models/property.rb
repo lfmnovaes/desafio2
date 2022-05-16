@@ -3,7 +3,10 @@ class Property < ApplicationRecord
 
   validates :district, presence: true
   validates :address, presence: true
+  validates :bedroom, presence: true
+  validates :bathroom, presence: true
   validates :price, presence: true
+  validates :discount, presence: true
 
   def cover_photo
     photos.third
