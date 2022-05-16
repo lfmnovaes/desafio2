@@ -1,0 +1,46 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+:root {
+  --swiper-navigation-size: 18px !important;
+  --swiper-theme-color: gray !important;
+}
+
+svg,
+img {
+  display: inherit;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: whitesmoke !important;
+  top: 86.5% !important;
+  z-index: 99 !important;
+}
+
+.swiper-button-prev {
+  left: 67% !important;
+}
+
+.swiper-button-next {
+  right: 7% !important;
+}
+
+.swiper-pagination {
+  background: rgba(41, 45, 50, 0.3) !important;
+  width: 30% !important;
+  bottom: 10% !important;
+  left: 65% !important;
+}

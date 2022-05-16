@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Furnished Apartments For Rent in São Paulo | Tabas</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <%= javascript_importmap_tags %>
+  </head>
+  <header class="flex flex-col fixed shrink-0 box-border w-full left-auto right-0 top-0 max-h-14 bg-white z-50">
+    <%= render "shared/nav" %>
+    <%= render "shared/filter_bar" %>
+  </header>
+  <body>
+    <main class="max-w-full m-0 mt-28">
+      <%= yield %>
+    </main>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5 bg-[#f8f9fe]">
+  <% @properties.each do |property| %>
+    <%= link_to property do %>
+      <%= render property %>
+    <% end %>
+  <% end %>
+</div>

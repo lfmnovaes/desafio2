@@ -1,0 +1,41 @@
+<div class="rounded-lg overflow-hidden shadow-xl border relative bg-white">
+  <div class="swiper">
+    <div class="absolute top-6 left-6 rounded-full py-0.5 px-2 bg-white z-10">
+      ID <%= property.district_to_initials %>00<%= '%02d' % property.id %>
+    </div>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <%= image_tag(property.cover_photo.path, :class => "p-4") %>
+      </div>
+      <div class="swiper-slide">
+        <%= image_tag(property.photos[0].path, :class => "p-4") %>
+      </div>
+      <div class="swiper-slide">
+        <%= image_tag(property.photos[1].path, :class => "p-4") %>
+      </div>
+    </div>
+    <div class="swiper-button-next font-extrabold"></div>
+    <div class="swiper-button-prev font-extrabold"></div>
+    <div class="swiper-pagination rounded-3xl"></div>
+  </div>
+  <div class="px-4 py-4">
+    <div class="font-normal text-sm"><%= property.district %></div>
+    <div class="font-semibold text-base mb-2"><%= property.address %></div>
+    <p class="text-gray-700 text-xs py-4">
+      <%= property.bedroom %> bedrooms • <%= property.bathroom %> baths
+    </p>
+  </div>
+  <% if property.discount == 0 %>
+    <div>&nbsp</div>
+    <div class="px-4 pb-4 flex justify-between">
+      <div class="font-medium text-xl">R$ <%= number_with_delimiter(property.price) %><span class="text-xs">/mo</span></div>
+      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm text-gray-700">Available 20 May</span>
+    </div>
+  <% else %>
+    <div class="px-4 line-through text-sm">R$ <%= number_with_delimiter(property.price) %></div>
+    <div class="px-4 pb-4 flex justify-between">
+      <div class="font-medium text-xl">R$ <%= number_with_delimiter(property.price - property.discount) %><span class="text-xs">/mo</span></div>
+      <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm text-gray-700">Available <%= rand(Time.now.strftime("%d").to_i..30) %> <%= Time.now.strftime("%B") %></span>
+    </div>
+  <% end %>
+</div>
